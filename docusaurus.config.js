@@ -45,7 +45,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/pastelaria-dev/pastelaria-dev.github.io/tree/main/'
         },
         blog: {
           showReadingTime: true,
@@ -56,7 +56,7 @@ const config = {
           // Please change this to your repo.
           // Remove this to remove the "edit this page" links.
           editUrl:
-            'https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/',
+            'https://github.com/pastelaria-dev/pastelaria-dev.github.io/tree/main/'
           // Useful options to enforce blogging best practices
           onInlineTags: 'warn',
           onInlineAuthors: 'warn',
@@ -78,7 +78,7 @@ const config = {
         title: 'pastelaria.dev',
         logo: {
           alt: 'pastelaria.dev logo',
-          src: 'img/logo.svg',
+          src: 'img/logo.png',
         },
         items: [
           {
@@ -138,7 +138,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} pastelaria.dev.`,
+        copyright: `Copyright © ${new Date().getFullYear()} pastelaria.dev authors.`,
       },
       prism: {
         theme: prismThemes.github,
