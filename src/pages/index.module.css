@@ -31,7 +31,8 @@
 }
 
 .brandMark {
-  display: flex;
+  display: grid;
+  grid-template-columns: auto minmax(0, 1fr);
   align-items: center;
   gap: 1rem;
 }
@@ -50,6 +51,8 @@
   font-size: clamp(3rem, 7vw, 5.5rem);
   line-height: 0.92;
   letter-spacing: -0.04em;
+  min-width: 0;
+  word-break: break-word;
 }
 
 .heroSubtitle {
@@ -170,6 +173,21 @@
   line-height: 1.7;
 }
 
+@media screen and (max-width: 1280px) {
+  .heroGrid {
+    grid-template-columns: minmax(0, 1fr) minmax(300px, 0.86fr);
+    gap: 2rem;
+  }
+
+  .heroTitle {
+    font-size: clamp(2.7rem, 6.1vw, 4.6rem);
+  }
+
+  .signalCard {
+    padding: 1.6rem;
+  }
+}
+
 @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 4rem 0 3rem;
@@ -187,6 +205,7 @@
 
 @media screen and (max-width: 640px) {
   .brandMark {
+    grid-template-columns: auto minmax(0, 1fr);
     align-items: flex-start;
     gap: 0.8rem;
   }
