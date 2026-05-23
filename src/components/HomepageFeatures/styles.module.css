@@ -1,11 +1,86 @@
 .features {
-  display: flex;
-  align-items: center;
-  padding: 2rem 0;
-  width: 100%;
+  padding: 1rem 0 5rem;
+  background:
+    linear-gradient(180deg, #fffaf4 0%, #fff3e5 100%);
 }
 
-.featureSvg {
-  height: 200px;
-  width: 200px;
+.headingBlock {
+  max-width: 740px;
+  margin-bottom: 2rem;
+}
+
+.sectionLabel {
+  margin: 0 0 0.75rem;
+  color: #995020;
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.sectionTitle {
+  margin: 0;
+  color: #31130c;
+  font-size: clamp(2rem, 5vw, 3.2rem);
+  line-height: 1.05;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1.25rem;
+}
+
+.featureCard {
+  min-height: 100%;
+  padding: 1.5rem;
+  border: 1px solid rgba(122, 63, 32, 0.1);
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 18px 45px rgba(112, 54, 21, 0.08);
+}
+
+.eyebrow {
+  margin: 0 0 0.9rem;
+  color: #c3642a;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.title {
+  margin: 0;
+  color: #31130c;
+  font-size: 1.45rem;
+  line-height: 1.15;
+}
+
+.description {
+  margin: 1rem 0 0;
+  color: #6c4939;
+  line-height: 1.7;
+}
+
+.inlineLink {
+  display: inline-flex;
+  margin-top: 1.15rem;
+  color: #8d431d;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.inlineLink:hover {
+  color: #6f3315;
+  text-decoration: none;
+}
+
+@media screen and (max-width: 996px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features {
+    padding-bottom: 4rem;
+  }
 }

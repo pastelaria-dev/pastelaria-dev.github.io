@@ -9,7 +9,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'pastelaria.dev',
-  tagline: 'Fried pastry in minutes',
+  tagline: 'Software com clareza, criterio e senso operacional.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -31,8 +31,18 @@ const config = {
   // useful metadata like html lang. For example, if your site is Chinese, you
   // may want to replace "en" with "zh-Hans".
   i18n: {
-    defaultLocale: 'en',
-    locales: ['en'],
+    defaultLocale: 'pt-BR',
+    locales: ['pt-BR', 'en-US'],
+    localeConfigs: {
+      'pt-BR': {
+        htmlLang: 'pt-BR',
+        label: 'Português (BR)',
+      },
+      'en-US': {
+        htmlLang: 'en-US',
+        label: 'English (US)',
+      },
+    },
   },
 
   presets: [
@@ -40,28 +50,8 @@ const config = {
       'classic',
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
-        docs: {
-          sidebarPath: './sidebars.js',
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pastelaria-dev/pastelaria-dev.github.io/tree/main/',
-        },
-        blog: {
-          showReadingTime: true,
-          feedOptions: {
-            type: ['rss', 'atom'],
-            xslt: true,
-          },
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
-          editUrl:
-            'https://github.com/pastelaria-dev/pastelaria-dev.github.io/tree/main/',
-          // Useful options to enforce blogging best practices
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
-        },
+        docs: false,
+        blog: false,
         theme: {
           customCss: './src/css/custom.css',
         },
@@ -72,8 +62,7 @@ const config = {
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      image: 'img/pastelaria.png',
       navbar: {
         title: 'pastelaria.dev',
         logo: {
@@ -82,12 +71,20 @@ const config = {
         },
         items: [
           {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
+            to: '/trail',
+            label: 'Trail Copilot',
             position: 'left',
-            label: 'Tutorial',
           },
-          {to: '/blog', label: 'Blog', position: 'left'},
+          {
+            href: 'mailto:w@pastelaria.dev',
+            label: 'Email',
+            position: 'right',
+          },
+          {
+            type: 'localeDropdown',
+            position: 'right',
+            queryString: '?persistLocale=true',
+          },
           {
             href: 'https://github.com/pastelaria-dev',
             label: 'GitHub',
@@ -99,38 +96,30 @@ const config = {
         style: 'dark',
         links: [
           {
-            title: 'Docs',
+            title: 'Empresa',
             items: [
               {
-                label: 'Tutorial',
-                to: '/docs/intro',
+                label: 'pastelaria.dev',
+                to: '/',
+              },
+              {
+                label: 'Email',
+                href: 'mailto:w@pastelaria.dev',
               },
             ],
           },
           {
-            title: 'Community',
+            title: 'Produto',
             items: [
               {
-                label: 'Stack Overflow',
-                href: 'https://stackoverflow.com/questions/tagged/pastelariadotdev',
-              },
-              {
-                label: 'Discord',
-                href: 'https://discordapp.com/invite/pastelariadotdev',
-              },
-              {
-                label: 'Twitter',
-                href: 'https://twitter.com/pastelariadotdev',
+                label: 'Trail Copilot',
+                to: '/trail',
               },
             ],
           },
           {
-            title: 'More',
+            title: 'Elsewhere',
             items: [
-              {
-                label: 'Blog',
-                to: '/blog',
-              },
               {
                 label: 'GitHub',
                 href: 'https://github.com/pastelaria-dev',
@@ -138,7 +127,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} pastelaria.dev authors.`,
+        copyright: `Copyright © ${new Date().getFullYear()} pastelaria.dev.`,
       },
       prism: {
         theme: prismThemes.github,
