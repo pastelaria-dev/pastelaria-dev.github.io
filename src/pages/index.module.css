@@ -52,7 +52,7 @@
   line-height: 0.92;
   letter-spacing: -0.04em;
   min-width: 0;
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .heroSubtitle {
@@ -180,7 +180,7 @@
   }
 
   .heroTitle {
-    font-size: clamp(2.7rem, 6.1vw, 4.6rem);
+    font-size: clamp(2.35rem, 5.2vw, 4.15rem);
   }
 
   .signalCard {
@@ -200,6 +200,7 @@
 
   .heroTitle {
     font-size: clamp(2.6rem, 14vw, 4.4rem);
+    white-space: normal;
   }
 }
 
