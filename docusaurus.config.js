@@ -5,11 +5,12 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 
 import {themes as prismThemes} from 'prism-react-renderer';
+import {TRAILS_ROUTE} from './src/data/routes.js';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'pastelaria.dev',
-  tagline: 'Software com clareza, criterio e senso operacional.',
+  tagline: 'Software com clareza, critério e senso operacional.',
   favicon: 'img/favicon.ico',
 
   // Set the production url of your site here
@@ -66,18 +67,18 @@ const config = {
       navbar: {
         title: 'pastelaria.dev',
         logo: {
-          alt: 'pastelaria.dev logo',
+          alt: 'Logo da pastelaria.dev',
           src: 'img/logo.png',
         },
         items: [
           {
-            to: '/trail',
-            label: 'Trail Copilot',
+            to: TRAILS_ROUTE,
+            label: 'Trilhas',
             position: 'left',
           },
           {
             href: 'mailto:w@pastelaria.dev',
-            label: 'Email',
+            label: 'E-mail',
             position: 'right',
           },
           {
@@ -103,7 +104,7 @@ const config = {
                 to: '/',
               },
               {
-                label: 'Email',
+                label: 'E-mail',
                 href: 'mailto:w@pastelaria.dev',
               },
             ],
@@ -112,13 +113,13 @@ const config = {
             title: 'Produto',
             items: [
               {
-                label: 'Trail Copilot',
-                to: '/trail',
+                label: 'Trilhas',
+                to: TRAILS_ROUTE,
               },
             ],
           },
           {
-            title: 'Elsewhere',
+            title: 'Links',
             items: [
               {
                 label: 'GitHub',
@@ -127,7 +128,7 @@ const config = {
             ],
           },
         ],
-        copyright: `Copyright © ${new Date().getFullYear()} pastelaria.dev.`,
+        copyright: `© ${new Date().getFullYear()} pastelaria.dev.`,
       },
       prism: {
         theme: prismThemes.github,

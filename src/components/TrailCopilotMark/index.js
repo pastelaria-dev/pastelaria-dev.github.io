@@ -23,12 +23,16 @@ function TrailIcon() {
   );
 }
 
-export default function TrailCopilotMark({className, compact = false}) {
+export default function TrailCopilotMark({
+  className,
+  compact = false,
+  title,
+}) {
   return (
     <div className={clsx(styles.mark, compact && styles.compact, className)}>
       <TrailIcon />
       <div className={styles.textBlock}>
-        <span className={styles.title}>Trail Copilot</span>
+        <span className={styles.title}>{title}</span>
       </div>
     </div>
   );

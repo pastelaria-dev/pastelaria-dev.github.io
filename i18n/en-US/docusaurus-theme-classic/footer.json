@@ -1,0 +1,30 @@
+{
+  "link.title.Empresa": {
+    "message": "Company",
+    "description": "The title of the footer links column with title=Empresa in the footer"
+  },
+  "link.title.Produto": {
+    "message": "Product",
+    "description": "The title of the footer links column with title=Produto in the footer"
+  },
+  "link.title.Links": {
+    "message": "Links",
+    "description": "The title of the footer links column with title=Links in the footer"
+  },
+  "link.item.label.pastelaria.dev": {
+    "message": "pastelaria.dev",
+    "description": "The label of footer link with label=pastelaria.dev linking to /"
+  },
+  "link.item.label.E-mail": {
+    "message": "Email",
+    "description": "The label of footer link with label=E-mail linking to mailto:w@pastelaria.dev"
+  },
+  "link.item.label.Trilhas": {
+    "message": "Trails",
+    "description": "The label of footer link with label=Trilhas linking to /trails"
+  },
+  "link.item.label.GitHub": {
+    "message": "GitHub",
+    "description": "The label of footer link with label=GitHub linking to https://github.com/pastelaria-dev"
+  }
+}

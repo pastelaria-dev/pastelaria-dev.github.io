@@ -1,0 +1,22 @@
+{
+  "title": {
+    "message": "pastelaria.dev",
+    "description": "The title in the navbar"
+  },
+  "logo.alt": {
+    "message": "pastelaria.dev logo",
+    "description": "The alt text of navbar logo"
+  },
+  "item.label.Trilhas": {
+    "message": "Trails",
+    "description": "Navbar item with label Trilhas"
+  },
+  "item.label.E-mail": {
+    "message": "Email",
+    "description": "Navbar item with label E-mail"
+  },
+  "item.label.GitHub": {
+    "message": "GitHub",
+    "description": "Navbar item with label GitHub"
+  }
+}

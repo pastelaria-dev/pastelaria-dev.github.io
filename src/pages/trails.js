@@ -6,12 +6,14 @@ import Heading from '@theme/Heading';
 
 import LocaleManager from '@site/src/components/LocaleManager';
 import TrailCopilotMark from '@site/src/components/TrailCopilotMark';
+import {TRAILS_ROUTE} from '@site/src/data/routes';
 import {getLocaleContent} from '@site/src/data/siteContent';
 import styles from './trail.module.css';
 
-export default function TrailPage() {
+export default function TrailsPage() {
   const {i18n} = useDocusaurusContext();
-  const content = getLocaleContent(i18n.currentLocale).trail;
+  const content = getLocaleContent(i18n.currentLocale).trails;
+  const subject = encodeURIComponent(content.emailSubject);
 
   return (
     <Layout title={content.title} description={content.description}>
@@ -21,7 +23,7 @@ export default function TrailPage() {
           <div className={clsx('container', styles.heroGrid)}>
             <div className={styles.copy}>
               <p className={styles.eyebrow}>{content.eyebrow}</p>
-              <TrailCopilotMark className={styles.heroMark} />
+              <TrailCopilotMark className={styles.heroMark} title={content.title} />
               <Heading as="h1" className={styles.srOnly}>
                 {content.title}
               </Heading>
@@ -30,7 +32,7 @@ export default function TrailPage() {
               <div className={styles.actions}>
                 <Link
                   className={clsx('button button--primary button--lg', styles.primaryAction)}
-                  href="mailto:w@pastelaria.dev?subject=Trail%20early%20access">
+                  href={`mailto:w@pastelaria.dev?subject=${subject}`}>
                   {content.primaryCta}
                 </Link>
               </div>

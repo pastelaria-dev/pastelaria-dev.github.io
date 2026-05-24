@@ -7,6 +7,7 @@ import Heading from '@theme/Heading';
 import LocaleManager from '@site/src/components/LocaleManager';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import TrailCopilotMark from '@site/src/components/TrailCopilotMark';
+import {TRAILS_ROUTE} from '@site/src/data/routes';
 import {getLocaleContent} from '@site/src/data/siteContent';
 import styles from './index.module.css';
 
@@ -20,7 +21,7 @@ function HomepageHeader({content}) {
             <img
               className={styles.brandLogo}
               src="/img/logo.png"
-              alt="Pastelaria.dev capybara logo"
+              alt={content.logoAlt}
             />
             <Heading as="h1" className={styles.heroTitle}>
               {content.title}
@@ -31,7 +32,7 @@ function HomepageHeader({content}) {
           <div className={styles.actions}>
             <Link
               className={clsx('button button--primary button--lg', styles.primaryAction)}
-              to="/trail">
+              to={TRAILS_ROUTE}>
               {content.primaryCta}
             </Link>
             <Link
@@ -45,7 +46,11 @@ function HomepageHeader({content}) {
         <div className={styles.heroPanel}>
           <div className={styles.signalCard}>
             <p className={styles.signalLabel}>{content.featuredLabel}</p>
-            <TrailCopilotMark className={styles.productTitleMark} compact />
+            <TrailCopilotMark
+              className={styles.productTitleMark}
+              compact
+              title={content.featuredTitle}
+            />
             <Heading as="h2" className={styles.srOnly}>
               {content.featuredTitle}
             </Heading>
